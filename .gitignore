@@ -2,23 +2,32 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
 node_modules
 dist
-dist-ssr
 *.local
 
-# Editor directories and files
+# Editor
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Next / build
+.next
+next-env.d.ts
+*.tsbuildinfo
+
+# Segredos (use .env.example como modelo)
+.env
+.env.*
+!.env.example
+
+# Testes
+test-results
+playwright-report
+coverage
+
+# Contexto do Claude (não versionar)
+/docs/
+/CLAUDE.md

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Soccer-Mania">
+  <circle cx="32" cy="32" r="26" fill="#00816a"/>
+  <path d="M32 14l9 6.5-3.4 10.5H26.4L23 20.5z" fill="#fff"/>
+  <path d="M32 50l-8-5.8 3-9.2h10l3 9.2z" fill="#fff" opacity=".85"/>
+  <text x="72" y="42" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="800" fill="#00816a">Soccer-Mania</text>
+</svg>

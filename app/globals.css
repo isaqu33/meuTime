@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-app: 244 246 248;
+  --c-surface: 255 255 255;
+  --c-subtle: 241 244 247;
+  --c-line: 226 231 237;
+  --c-fg: 15 23 42;
+  --c-muted: 100 116 139;
+  --c-brand: 0 129 106;
+  --c-brand-soft: 224 245 240;
+  --c-brand-fg: 255 255 255;
+  --c-ok: 22 163 74;
+  --c-warn: 217 119 6;
+  --c-danger: 220 38 38;
+  color-scheme: light;
+}
+
+.dark {
+  --c-app: 11 15 20;
+  --c-surface: 20 26 34;
+  --c-subtle: 28 36 46;
+  --c-line: 42 52 64;
+  --c-fg: 232 237 243;
+  --c-muted: 139 152 168;
+  --c-brand: 45 190 160;
+  --c-brand-soft: 16 48 44;
+  --c-brand-fg: 6 20 18;
+  --c-ok: 74 222 128;
+  --c-warn: 251 191 36;
+  --c-danger: 248 113 113;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(var(--c-app));
+  color: rgb(var(--c-fg));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* o Chakra pinta o body com o próprio tema; aqui a fonte da verdade são as variáveis acima */
+body.chakra-ui-light,
+body.chakra-ui-dark {
+  background-color: rgb(var(--c-app));
+  color: rgb(var(--c-fg));
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--c-brand));
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}

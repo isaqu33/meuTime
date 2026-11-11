@@ -1,0 +1,31 @@
+name: meutime
+
+services:
+  web:
+    container_name: meutime-web-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - "${WEB_PORT_HOST:-3080}:3080"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - meutime-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3080/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+
+networks:
+  meutime-network:
+    name: meutime-network
+    driver: bridge
